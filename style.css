@@ -1,0 +1,25 @@
+body{
+    background-color: #061E29;
+    color: #F3F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1D546D;
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#Countdown{
+    display: flex;
+    
+}
