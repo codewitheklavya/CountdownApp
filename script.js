@@ -12,6 +12,12 @@ function updateTimer(){
     const hrs = Math.floor(distancePending%(24*60*60*1000)/(60*60*1000));
     const mins = Math.floor(distancePending%(60*60*1000)/(60*1000));
     const secs = Math.floor(distancePending%(60*1000)/1000);
+
+    //changes in UI
+    document.getElementById("days").innerHTML = day;
+    document.getElementById("hours").innerHTML = hrs;
+    document.getElementById("mins").innerHTML = mins;
+    document.getElementById("secs").innerHTML = secs;
 }
 
 
