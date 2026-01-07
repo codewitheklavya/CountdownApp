@@ -18,6 +18,8 @@ function startCountdown(){
         return;
     }
 
+    //save to localStorage
+    localStorage.setItem("countdownEnd",EndDate);
     if(timer) clearInterval(timer);
 
     updateTimer();
@@ -30,6 +32,7 @@ function updateTimer() {
 
     if (distancePending <= 0) {
         clearInterval(timer);
+        localStorage.removeItem("countdownEnd");//clear Saved Date;
         document.getElementById("Countdown").innerHTML = "EXPIRED";
         document.getElementById("Progress-bar").style.width = "100%";
         return;
@@ -54,4 +57,16 @@ function updateTimer() {
     const percent = Math.min((covered / total) * 100, 100);
 
     document.getElementById("Progress-bar").style.width = percent + "%";
+}
+
+window.onload = function(){
+    const savedEndDate = localStorage.getItem("countdownEnd");
+
+    if(savedEndDate){
+        EndDate = Number(savedEndDate);
+        StartDate = Date.now();
+
+        updateTimer();  
+        timer = setInterval(updateTimer,1000);
+    }
 }
