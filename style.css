@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap');
+
 body{
     background-color: #061E29;
     color: #F3F4F4;
@@ -26,11 +29,14 @@ body{
 #Countdown{
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;    
+    gap: 10px;   
+    margin-top: 20px; 
 }
 h1{
+    font-family: "Inter";
     font-size: 2em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 #Countdown div{
@@ -63,4 +69,23 @@ h2{
     height: 100%;
     border-radius: 5px;
     transition: width 1s ease-in-out;
+}
+#container-btn{
+    background-color: #061E29;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 10px 7px 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+#container-btn:hover{
+    transform:scale(1.1);
+    transition-duration: 1ms;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+}
+#targetinput{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
