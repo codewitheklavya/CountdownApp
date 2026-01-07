@@ -1,4 +1,4 @@
-const EndDate = new Date("23 Sept, 2024 20:00:00").getTime();
+const EndDate = new Date("2026-01-08T20:00:00").getTime();
 const StartDate = new Date().getTime();
 
 
@@ -12,16 +12,16 @@ function updateTimer(){
     const HourInMiliSec = (60*60*1000);
     const SecInMiliSec = (60*1000);
 
-    const day = distancePending/(DayInMiliSec);
+    const day = Math.floor(distancePending/DayInMiliSec);
     const hrs = Math.floor(distancePending%(DayInMiliSec)/(HourInMiliSec));
-    const mins = Math.floor(distancePending%(HourInMiliSec)/(DayInMiliSec));
-    const secs = Math.floor(distancePending%(DayInMiliSec)/1000);
+    const mins = Math.floor(distancePending%(HourInMiliSec)/(SecInMiliSec));
+    const secs = Math.floor(distancePending%(SecInMiliSec)/1000);
 
     //changes in UI
     document.getElementById("days").innerHTML = day;
     document.getElementById("hours").innerHTML = hrs;
-    document.getElementById("mins").innerHTML = mins;
-    document.getElementById("secs").innerHTML = secs;
+    document.getElementById("minutes").innerHTML = mins;
+    document.getElementById("seconds").innerHTML = secs;
 }
 
 
